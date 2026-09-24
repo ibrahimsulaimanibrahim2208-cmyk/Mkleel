@@ -1,59 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MK Leel | Web3</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0f14;
-      color: white;
-      text-align: center;
-    }
+<title>Drx. MK Leel | Web3</title>
 
-    .container {
-      padding: 80px 20px;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #05070d;
+    color: #ffffff;
+    line-height: 1.6;
+}
 
-    p {
-      font-size: 20px;
-      color: #b8c0cc;
-    }
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
 
-    .card {
-      max-width: 500px;
-      margin: 40px auto;
-      padding: 30px;
-      border: 1px solid #303846;
-      border-radius: 20px;
-      background: #111720;
-    }
-  </style>
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #6c2cff;
+    filter: blur(150px);
+    opacity: 0.25;
+    top: 10%;
+    left: 20%;
+}
+
+.hero-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #8d5cff;
+    color: #bda5ff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: clamp(45px, 10vw, 90px);
+    letter-spacing: -3px;
+    margin-bottom: 10px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #ffffff, #9d6cff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    color: #aeb4c2;
+    font-size: 18px;
+    max-width: 650px;
+    margin: 15px auto 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 12px;
+    border: 1px solid #343947;
+    background: #111520;
+}
+
+.btn.primary {
+    background: #713cff;
+    border-color: #713cff;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #956cff;
+}
+
+/* ABOUT */
+.about {
+    background: #080b13;
+}
+
+.about-card {
+    background: #0d111c;
+    border: 1px solid #202535;
+    border-radius: 20px;
+    padding: 30px;
+    color: #b7bdc9;
+    text-align: center;
+}
+
+/* SKILLS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #0c101a;
+    border: 1px solid #202535;
+    padding: 25px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #7c4dff;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.card p {
+    color: #9da5b5;
+}
+
+/* PROJECTS */
+.project {
+    min-height: 160px;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid #1d2230;
+    padding: 30px 0;
+    text-align: center;
+    color: #737b8c;
+    font-size: 14px;
+}
+
+.socials {
+    margin-top: 15px;
+}
+
+.socials a {
+    color: #a987ff;
+    text-decoration: none;
+    margin: 0 8px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<!-- HERO -->
+<header class="hero">
+    <div class="container hero-content">
 
-    <h1>MK Leel</h1>
+        <div class="badge">WEB3 • CRYPTO • TECHNOLOGY</div>
 
-    <div class="card">
-      <p>Crypto Trader</p>
-      <p>Web3 Learner</p>
-      <p>Pharmacy Student</p>
+        <h1>
+            <span class="gradient">Drx. MK Leel</span>
+        </h1>
+
+        <p>
+            Crypto Trader • Web3 Learner • Pharmacy Student
+        </p>
+
+        <p>
+            Exploring Web3, blockchain technology, decentralized ecosystems
+            and the future of digital innovation.
+        </p>
+
+        <div class="buttons">
+            <a href="#about" class="btn primary">Explore</a>
+            <a href="#projects" class="btn">My Projects</a>
+        </div>
+
     </div>
+</header>
 
-    <p>Exploring Web3, Blockchain & Crypto.</p>
 
-  </div>
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="container">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about-card">
+            <p>
+                I am Drx. MK Leel, a crypto trader and Web3 learner
+                interested in blockchain, decentralized technology,
+                digital assets and innovation.
+            </p>
+
+            <br>
+
+            <p>
+                My journey is focused on learning, experimenting,
+                building and understanding how Web3 can create
+                new opportunities for the future.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SKILLS -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">
+            What I <span>Explore</span>
+        </h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>₿ Crypto Trading</h3>
+                <p>
+                    Spot trading, market research,
+                    technical analysis and risk management.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>◈ Web3</h3>
+                <p>
+                    Learning blockchain, DEXs,
+                    decentralized applications and Web3 ecosystems.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🔗 Blockchain</h3>
+                <p>
+                    Exploring blockchain technology,
+                    digital assets and decentralized networks.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💊 Pharmacy</h3>
+                <p>
+                    Building knowledge in pharmacy while
+                    exploring technology and innovation.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="about">
+    <div class="container">
+
+        <h2 class="section-title">
+            My <span>Projects</span>
+        </h2>
+
+        <div class="grid">
+
+            <div class="card project">
+                <h3>Web3 Learning</h3>
+                <p>
+                    Documenting my journey into Web3,
+                    blockchain and decentralized technology.
+                </p>
+            </div>
+
+            <div class="card project">
+                <h3>Crypto Research</h3>
+                <p>
+                    Studying crypto markets, projects,
+                    trading setups and market structure.
+                </p>
+            </div>
+
+            <div class="card project">
+                <h3>Web3 Portfolio</h3>
+                <p>
+                    A personal digital space for my Web3
+                    journey, projects and experiments.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">
+            Connect <span>With Me</span>
+        </h2>
+
+        <div class="about-card">
+
+            <p>
+                Follow my journey as I learn, trade,
+                research and build in Web3.
+            </p>
+
+            <div class="socials">
+
+                <a href="https://github.com/" target="_blank">
+                    GitHub
+                </a>
+
+                <a href="https://x.com/" target="_blank">
+                    X
+                </a>
+
+                <a href="https://t.me/" target="_blank">
+                    Telegram
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+    © 2026 Drx. MK Leel — Web3 Journey
+</footer>
 
 </body>
-        </html>
+  </html>
